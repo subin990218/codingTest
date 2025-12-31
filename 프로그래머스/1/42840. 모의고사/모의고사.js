@@ -6,9 +6,9 @@ function solution(answers) {
     const pattern3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
     
     for (let i = 0; i < answers.length; i++) {
-      if (answers[i] === pattern1[i%5]) count[0]++;
-      if (answers[i] === pattern2[i%8]) count[1]++;
-      if (answers[i] === pattern3[i%10]) count[2]++;
+      if (answers[i] === pattern1[i%pattern1.length]) count[0]++;
+      if (answers[i] === pattern2[i%pattern2.length]) count[1]++;
+      if (answers[i] === pattern3[i%pattern3.length]) count[2]++;
     }
 
     const maxScore = Math.max(...count);
