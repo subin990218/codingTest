@@ -1,12 +1,10 @@
 function solution(s) {
     var answer = 0;
-    const words = ["zero","one","two","three","four",
-    "five","six","seven","eight","nine"
-    ];
-
-    for (let i = 0; i < words.length; i += 1) {
-        s = s.split(words[i]).join(i)
+    let numList = ["zero","one", "two", "three", "four", "five", "six", "seven","eight", "nine"]
+    
+    for (let i = 0; i < numList.length; i += 1) {
+        s = s.split(numList[i]).join(i)
     }
-    answer = Number(s);
+    answer = Number(s)
     return answer;
 }
